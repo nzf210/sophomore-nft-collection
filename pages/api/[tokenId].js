@@ -2,7 +2,7 @@ export default function handler(req, res) {
     // get the tokenId from the query params
     const tokenId = req.query.tokenId;
     // As all the images are uploaded on github, we can extract the images from github directly.
-    const image_url = "https://github.com/nzf210/sophomore-nft-collection";
+    const image_url = "https://github.com/nzf210/sophomore-nft-collection/blob/main/public/";
     // "https://raw.githubusercontent.com/LearnWeb3DAO/NFT-Collection/main/my-app/public/cryptodevs/";
     // The api is sending back metadata for a Crypto Dev
     // To make our collection compatible with Opensea, we need to follow some Metadata standards
@@ -11,6 +11,6 @@ export default function handler(req, res) {
     res.status(200).json({
         name: "Wancash" + tokenId,
         description: "Wancash is a collection of developers in crypto",
-        image: image_url + tokenId + ".svg",
+        image: image_url + tokenId + ".jpg",
     });
 }
